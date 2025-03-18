@@ -15,6 +15,7 @@ jobs:
     permissions:
       contents: read
       packages: write # GHCRにpushするための権限
+      id-token: write # OIDC トークン取得のため(SLSA用。Githubのビルド証明)
 
     steps:
       - name: Checkout code
